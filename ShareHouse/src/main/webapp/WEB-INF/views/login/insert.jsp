@@ -222,8 +222,8 @@ $(function(){
 				return false;
 			} 
 	 $.ajax({url:"/send",
-		 	data:"emailAddress="+email,
-			dataType:"json"}
+		 	data:"emailAddress="+email, // 데이터 보낼 때
+			dataType:"json"} // 데이터 받아올 때
 		).done(function(data){
 			if(eval(data[1])){
 				num = data[0];
