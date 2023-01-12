@@ -25,4 +25,5 @@ public class BoardUserDetailsService implements UserDetailsService {
 			return new SecurityUser(user); //user에 저장된 값 들고가서 SecurityUser객체 생성
 		}
 	}
+	
 }
