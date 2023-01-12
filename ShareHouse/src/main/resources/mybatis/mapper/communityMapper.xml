@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sharehouse.dao.CommunityDao">
+
+	<insert id="insert" parameterType="com.sharehouse.dto.CommunityDto">
+		insert into comm ( id, comm_title, comm_con, comm_date)
+		values( #{id}, #{comm_title}, #{comm_con}, now())
+	</insert>
+	
+	<update id="updatePost" parameterType="com.sharehouse.dto.CommunityDto">
+		update comm set comm_title=#{comm_title} , comm_con=#{comm_con} where comm_no=#{comm_no}
+	</update>
+	
+	<update id="addReadcount" parameterType="int">
+		update comm set comm_v_cnt = comm_v_cnt + 1 where comm_no = #{comm_no}
+	</update>
+
+	<delete id="deletePost" parameterType="int">
+		delete from comm where comm_no = #{comm_no}
+	</delete>
+	
+	<select id="count" resultType="int">
+		select count(*) from comm
+	</select>
+  
+	<select id="communityOne" parameterType="int" resultType="com.sharehouse.dto.CommunityDto">
+		select * from comm where comm_no = #{comm_no}
+	</select>
+	
+	<!-- <select id="communityList" parameterType="map" resultType="com.sharehouse.dto.CommunityDto">
+		<![CDATA[select * from comm 
+		order by comm_date desc limit #{start} , #{count}	
+		]]>	 start와 count는 dto에 없음. map을 사용. 
+	</select> 
+	 -->
+	<select id="communityList" parameterType="map" resultType="com.sharehouse.dto.CommunityDto">
+		select * from comm 
+		<choose>
+			<when test="sort == null"> order by comm_date desc</when>
+			<when test="sort == 0"> order by comm_date desc</when>
+			<when test="sort == 1"> order by comm_v_cnt desc</when>
+		</choose>
+			 limit #{start} , #{count} 
+			<!-- start와 count는 dto에 없음. map을 사용. -->
+	</select> 
+
+	
+	 <select id="communityListSearch" parameterType="map" resultType="com.sharehouse.dto.CommunityDto">
+		
+		select * from comm where comm_title like concat('%',#{search},'%') 
+		<choose>
+			<when test="sort == null"> order by comm_date desc</when>
+			<when test="sort == 0"> order by comm_date desc</when>
+			<when test="sort == 1"> order by comm_v_cnt desc</when>
+		</choose>
+			limit #{start} , #{count}
+	</select>
+
+	<select id="countSearch" resultType="int" parameterType="map">
+	
+		select count(*) from comm where comm_title like concat('%',#{search},'%') 
+
+	</select>
+	
+	<select id="viewPost" parameterType="int" resultType="com.sharehouse.dto.CommunityDto">
+		select Id, Comm_title, Comm_con, Comm_date, Comm_v_cnt from comm where Comm_no=${Comm_no}
+	</select>
+	
+	<select id="communityNotice" parameterType="map" resultType="com.sharehouse.dto.CommunityDto">
+		select * from comm where id = any(select id from user where status='ROLE_ADMIN') order by comm_date desc;
+	</select>
+	
+
+</mapper>

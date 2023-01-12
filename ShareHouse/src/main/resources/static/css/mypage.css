@@ -1,0 +1,36 @@
+@charset "UTF-8";
+.mypagelist{
+	width:200px;
+	background-color:#eee;
+	border-right:1px solid #ddd;
+	position:fixed;
+	margin-left:15px;
+	height:100%;
+	text-align:center;
+}
+
+.mypage_sidebar{
+	display:inline-block;
+	width:100%;
+	margin:15% 0;
+	font-size: 15pt;
+	
+	position:relative;
+	
+}
+
+.under{
+	margin:1% 0;
+	display:none;
+}
+.mypage_sidebar a:hover{
+	background-color:yellowgreen; color:white;
+}
+
+.mypage_title{
+	position:absolute;
+	display:inline-block;
+	left:15%;
+}
+
+

@@ -1,0 +1,29 @@
+@charset "UTF-8";
+.table_list{
+		width:800px;
+		height:30%;
+		text-align:center;
+		margin-left:300px;
+		border : 1px solid black;
+		border-collapse : collapse;
+		border-left : 0;
+		border-right : 0;
+}
+
+.apply{
+	border-radius: 4px;
+	cursor: pointer;
+	background-color:#99ff00;
+	border-style:"solid";
+	border-width:thin;
+	
+}
+
+.delete{
+	border-radius: 4px;
+	cursor: pointer;
+	background-color:#ff0000;
+	border-style:"solid";
+	border-width:thin;
+	color:white;
+}

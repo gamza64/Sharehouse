@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+	html, body{
+		width : 100%;
+		height : 100%;
+		margin : 0;
+	}
+	main{
+		width : 80%;
+		height : 100%;
+		float:right;
+		background-color: #d6d6d6;
+	}
+	aside{
+		width : 20%;
+		height : 100%;
+		margin-right : 0;
+		float:left;
+	}
+	 a{
+		text-decoration : none;
+		color : black;
+	}
+	nav{
+		background-color : #444444;
+		color : white;
+		height : 100%;	
+	}
+	nva > ul{
+		padding:0;
+	}
+	nav > ul > li{
+		list-style:none;
+		width : 100%;
+		height : 4.5rem;
+		line-height : 4.5rem;
+		text-align : center;
+		cursor:pointer;
+	}
+	nav > ul > li.active{
+		background-color : #333333;
+	}
+	nav > ul > li > a{
+		text-decoration : none;
+		color : white;	
+	}
+	li:hover{
+		background-color:#565656;
+	}
+	.logo{
+		position : relative;
+		display : inline-block;
+		width : 100%;
+		text-align:center;
+	}
+	a{
+	text-decoration-line: none;
+	text-decoration-color: #000;
+	color:#000;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  display: inline-block; 
+}
+
+#p_info{
+	position: relative;
+	display: inline-block;
+	left: 70%;
+}
+
+#main{
+	position: relative;
+	display: inline-block;
+	left:7%;
+	padding-top:20px;
+}
+
+
+#login{
+	right: 10%;
+}
+
+.home_img{
+	left:10%;
+}
+
+.upper_menu{
+	margin:0 15px;
+	font-size: 17pt;
+	left: 30%;
+}
+
+.upper_frame{
+	position: absolute;
+	top: 35px;
+	left:27%;
+}
+
+.user_profil_img{
+	width:60px;
+	border-radius:50%;
+	overflow:hidden;
+	display:inline-block;
+}
+
+.user_uimg{
+	overflow:hidden;
+	width:100%
+}
+
+#uppernav {
+	display:block;
+	width:100%;
+	height:5rem;
+	background-color : #444444;
+}
+
+.paging {
+	diplay:flex;
+	
+}
+	

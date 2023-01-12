@@ -1,0 +1,60 @@
+@charset "UTF-8";
+.mypage_title{
+	position:relative;
+	margin-left:100px;
+	
+}
+
+.user_info{
+	border:solid thin;
+	position:absolute;
+	width:30%;
+	left:15%;
+	height:50%;
+	margin-left:100px;
+}
+
+.uimg{
+	border:solid thin;
+	position:relative;
+	width:30%;
+	height:40%;
+	float:left;
+}
+
+#uimg{
+	width:70%;
+}
+
+.uframe{
+	padding:15px 0;
+	position:relative;
+	width:65%;
+	float:left;
+	border-bottom: solid thin;
+}
+
+.uframe2{
+	float:left;
+}
+
+.modify{
+	position:absolute;
+	top:90%;
+	left:42%;
+	cursor:pointer;
+	font-size:12px;
+	width:15%;
+	color:white;
+	background-color:green;
+	border-radius: 6px;
+	border-style: solid;
+	border-width: thin;
+}
+
+.ok_btn{
+	margin-top:5px;
+	margin-left:280px;
+	
+}
+

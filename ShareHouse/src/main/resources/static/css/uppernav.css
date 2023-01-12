@@ -1,0 +1,100 @@
+@charset "UTF-8";
+a{
+	text-decoration-line: none;
+	text-decoration-color: #000;
+	color:#000;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  display: inline-block; 
+}
+
+#p_info{
+	position: relative;
+	display: inline-block;
+	left: 70%;
+}
+
+#main{
+	position: relative;
+	display: inline-block;
+	left:7%;
+}
+
+
+#login{
+	right: 10%;
+}
+
+.home_img{
+	left:10%;
+}
+
+.upper_menu{
+	margin:0 15px;
+	font-size: 17pt;
+	left: 30%;
+}
+
+.upper_frame{
+	position: absolute;
+	top: 35px;
+	left:27%;
+}
+
+.user_profil_img{
+	width:60px;
+	border-radius:50%;
+	overflow:hidden;
+	display:inline-block;
+}
+
+.user_uimg{
+	overflow:hidden;
+	width:100%
+}
+
+#uppernav {
+	display:block;
+	width:100%;
+	height:130px;
+}
+
+#search{
+	position:absolute;
+	width : 100%;
+	text-align : center;
+	top: 20%;
+}
+#search > ul{
+	list-style-type: none;
+    width: 60%;
+    margin: auto;
+    padding: 0;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+#search > ul > li{
+	line-height:3;
+	height :3.5rem;
+	display : inline-block;
+	padding : 12px;
+}
+#location{
+	font-size:1.6rem;
+	height:3rem;
+	border:none;
+	outline-style:none;
+}
+.submit{
+	height : 3rem;	
+	width : 4.8rem;
+	border-radius : 30px;
+	cursor : pointer;
+	border:none;
+	background-color : 
+}

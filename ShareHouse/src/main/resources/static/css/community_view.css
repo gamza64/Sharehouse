@@ -1,0 +1,25 @@
+@charset "EUC-KR";
+
+#center{
+		width : 55%;
+		margin : auto;
+	}
+	
+.community_list{
+		font-size : 30px;
+}
+	
+.table {
+	width: 800px;
+	height: 400px;
+	
+}
+.img-button {
+	width:20;
+	height:20;
+	
+}
+
+.back {
+	margin-left:620px;
+}
